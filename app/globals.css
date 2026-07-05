@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-canvas text-ink antialiased;
+    font-feature-settings: "cv11", "ss01";
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Consistent, visible focus for keyboard users */
+  :focus-visible {
+    outline: none;
+  }
+
+  /* Balance / pretty text helpers used across sections */
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+@layer utilities {
+  .h-4\.5 {
+    height: 1.125rem;
+  }
+  .w-4\.5 {
+    width: 1.125rem;
+  }
+}
