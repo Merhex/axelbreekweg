@@ -30,9 +30,10 @@ export function FeatureGrid({
             as="li"
             key={card.title}
             delay={(i % 4) * 0.05}
-            className="group flex flex-col gap-3 rounded-2xl bg-card p-5 shadow-soft ring-1 ring-line/60 transition duration-200 ease-smooth hover:-translate-y-1 hover:shadow-lift sm:p-6"
+            hoverLift
+            className="group flex flex-col gap-3 rounded-2xl bg-card p-5 shadow-soft ring-1 ring-line/60 transition-shadow duration-200 ease-smooth hover:shadow-lift sm:p-6"
           >
-            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-forest-faint text-forest transition group-hover:scale-105">
+            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-forest-faint text-forest transition-transform duration-200 group-hover:scale-105">
               <Icon name={card.icon} className="h-5 w-5" />
             </span>
             <span className="text-[15px] font-medium leading-snug tracking-tight text-ink">
