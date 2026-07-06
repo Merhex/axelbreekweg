@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { I18nProvider } from "@/lib/i18n";
+import { ScrollHoverGuard } from "@/components/ScrollHoverGuard";
 
 export const metadata: Metadata = {
   title: "Axel — A reliable tenant in Vilnius",
@@ -29,6 +30,7 @@ export default function RootLayout({
         >
           Skip to content
         </a>
+        <ScrollHoverGuard />
         <I18nProvider>{children}</I18nProvider>
       </body>
     </html>

@@ -36,6 +36,12 @@
   .text-pretty {
     text-wrap: pretty;
   }
+
+  /* While scrolling, don't let cards react to the cursor sweeping over them
+     (prevents a hover flicker as cards slide under a stationary pointer). */
+  html[data-scrolling] .hover-guard {
+    pointer-events: none;
+  }
 }
 
 @layer utilities {

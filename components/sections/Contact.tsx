@@ -68,7 +68,7 @@ export function Contact() {
                             ? "noopener noreferrer"
                             : undefined
                         }
-                        className="group flex items-center gap-3 rounded-2xl bg-card p-4 shadow-soft ring-1 ring-line/60 transition duration-200 ease-smooth hover:-translate-y-0.5 hover:shadow-lift focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
+                        className="hover-guard group flex items-center gap-3 rounded-2xl bg-card p-4 shadow-soft ring-1 ring-line/60 transition-shadow duration-200 ease-smooth hover:shadow-lift focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
                       >
                         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-forest-faint text-forest">
                           <Icon name={link.type} className="h-5 w-5" />
