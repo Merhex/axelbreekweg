@@ -77,17 +77,17 @@ export function Hero() {
         <motion.div {...photoFade} className="order-1 lg:order-2">
           <div className="relative">
             <Photo
-              src="/images/dogs-together.jpg"
+              src="/images/hero.jpg"
               alt={t.hero.photoLabel}
               label={t.hero.photoLabel}
               tone="warm"
               priority
-              imgClassName="object-[center_42%]"
-              className="aspect-[4/5] w-full shadow-lift sm:aspect-[5/6]"
+              imgClassName="object-center"
+              className="aspect-[3/4] w-full shadow-lift"
             />
-            <div className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-white/85 px-3.5 py-1.5 text-sm font-medium text-ink shadow-soft ring-1 ring-line backdrop-blur">
+            <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-white/85 px-3.5 py-1.5 text-sm font-medium text-ink shadow-soft ring-1 ring-line backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-forest" aria-hidden="true" />
-              Raava &amp; Goldas
+              Axel, Raava &amp; Goldas
             </div>
           </div>
         </motion.div>
