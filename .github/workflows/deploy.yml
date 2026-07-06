@@ -32,11 +32,9 @@ jobs:
           cache: npm
 
       - name: Configure Pages
-        # Enables Pages (build type = workflow) if it isn't already, and
-        # provides deployment context.
+        # Provides deployment context. Requires Pages to be enabled once in
+        # Settings -> Pages -> Source: "GitHub Actions".
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - name: Install dependencies
         run: npm ci
