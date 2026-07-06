@@ -21,9 +21,7 @@ import {
   Wind,
   SprayCan,
   Wrench,
-  Phone,
-  MessageCircle,
-  MessageSquare,
+  Mail,
   Linkedin,
   type LucideIcon,
 } from "lucide-react";
@@ -52,9 +50,7 @@ const map: Record<string, LucideIcon> = {
   wind: Wind,
   "spray-can": SprayCan,
   wrench: Wrench,
-  phone: Phone,
-  whatsapp: MessageCircle,
-  imessage: MessageSquare,
+  email: Mail,
   linkedin: Linkedin,
 };
 

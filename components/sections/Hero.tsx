@@ -19,29 +19,31 @@ export function Hero() {
           transition: { duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] as const },
         };
 
+  const photoFade = reduce
+    ? {}
+    : {
+        initial: { opacity: 0, scale: 0.98 },
+        animate: { opacity: 1, scale: 1 },
+        transition: { duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] as const },
+      };
+
   return (
     <section
       id="top"
-      className="relative flex min-h-[100svh] items-center overflow-hidden pt-16"
+      className="relative flex min-h-[100svh] items-center overflow-hidden pt-24 pb-16 sm:pt-28"
     >
-      {/* full-bleed lifestyle photo */}
-      <Photo
-        alt={t.hero.photoLabel}
-        label={t.hero.photoLabel}
-        tone="warm"
-        rounded="rounded-none"
-        priority
-        className="absolute inset-0 h-full w-full"
+      {/* soft warm backdrop */}
+      <div
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(90%_70%_at_80%_10%,rgba(74,93,79,0.06),transparent_55%),radial-gradient(80%_60%_at_10%_90%,rgba(243,238,229,0.9),transparent_60%)]"
+        aria-hidden="true"
       />
-      {/* readability scrim */}
-      <div className="absolute inset-0 bg-gradient-to-t from-canvas via-canvas/70 to-canvas/30" />
-      <div className="absolute inset-0 bg-gradient-to-r from-canvas/80 via-transparent to-transparent" />
 
-      <div className="relative mx-auto w-full max-w-content px-5 sm:px-8">
-        <div className="max-w-2xl">
+      <div className="relative mx-auto grid w-full max-w-content items-center gap-10 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+        {/* text */}
+        <div className="order-2 lg:order-1">
           <motion.p
             {...fade(0.05)}
-            className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-1.5 text-sm font-medium text-forest ring-1 ring-line backdrop-blur"
+            className="mb-5 inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-sm font-medium text-forest shadow-soft ring-1 ring-line"
           >
             <Dog className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
             {t.hero.eyebrow}
@@ -70,12 +72,31 @@ export function Hero() {
             </Button>
           </motion.div>
         </div>
+
+        {/* photo */}
+        <motion.div {...photoFade} className="order-1 lg:order-2">
+          <div className="relative">
+            <Photo
+              src="/images/dogs-together.jpg"
+              alt={t.hero.photoLabel}
+              label={t.hero.photoLabel}
+              tone="warm"
+              priority
+              imgClassName="object-[center_42%]"
+              className="aspect-[4/5] w-full shadow-lift sm:aspect-[5/6]"
+            />
+            <div className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-white/85 px-3.5 py-1.5 text-sm font-medium text-ink shadow-soft ring-1 ring-line backdrop-blur">
+              <span className="h-2 w-2 rounded-full bg-forest" aria-hidden="true" />
+              Raava &amp; Goldas
+            </div>
+          </div>
+        </motion.div>
       </div>
 
       <a
         href="#trust"
         aria-label={t.hero.ctaPrimary}
-        className="absolute bottom-7 left-1/2 hidden -translate-x-1/2 text-muted transition hover:text-ink sm:block"
+        className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 text-muted transition hover:text-ink lg:block"
       >
         <ArrowDown className="h-5 w-5 animate-bounce" strokeWidth={1.5} />
       </a>

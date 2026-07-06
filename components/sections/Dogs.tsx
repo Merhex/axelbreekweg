@@ -6,6 +6,12 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Photo } from "@/components/ui/Photo";
 
+// Real photos keyed by dog name (names are the same in both locales).
+const dogPhotos: Record<string, string | undefined> = {
+  Raava: "/images/raava.jpg",
+  Goldas: "/images/goldas.jpg",
+};
+
 export function Dogs() {
   const { t } = useI18n();
 
@@ -21,10 +27,12 @@ export function Dogs() {
             className="overflow-hidden rounded-3xl bg-card shadow-soft ring-1 ring-line/60"
           >
             <Photo
+              src={dogPhotos[dog.name]}
               alt={dog.photoLabel}
               label={dog.photoLabel}
               tone={i % 2 === 0 ? "warm" : "forest"}
               rounded="rounded-none"
+              imgClassName="object-[center_38%]"
               className="aspect-[4/3] w-full"
             />
             <div className="p-6 sm:p-8">

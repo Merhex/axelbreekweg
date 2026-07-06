@@ -14,9 +14,11 @@ export function About() {
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <Reveal>
           <Photo
+            src="/images/portrait.jpg"
             alt={t.about.photoLabel}
             label={t.about.photoLabel}
             tone="warm"
+            imgClassName="object-top"
             className="aspect-[4/5] w-full shadow-soft"
           />
         </Reveal>
