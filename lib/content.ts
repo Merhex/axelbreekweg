@@ -174,7 +174,6 @@ export const content: Record<Locale, Content> = {
         { icon: "dog", label: "Du išdresuoti šunys" },
         { icon: "sparkles", label: "Tvarkingas ir organizuotas" },
         { icon: "moon", label: "Ramus gyvenimo būdas" },
-        { icon: "star", label: "Rekomendacijos pateikiamos" },
         { icon: "wallet", label: "Stabilios pajamos" },
         { icon: "handshake", label: "Galiu padidinti užstatą" },
       ],
@@ -347,10 +346,6 @@ export const content: Record<Locale, Content> = {
           a: "Taip. Šunys ramiai lieka vieni, kol esu darbe, ir nedaro jokios žalos.",
         },
         {
-          q: "Ar galite pateikti rekomendacijas?",
-          a: "Taip, mielai pateiksiu ankstesnių nuomotojų ir darbdavio rekomendacijas paprašius.",
-        },
-        {
           q: "Ar galite pateikti darbo pažymą?",
           a: "Taip, galiu pateikti darbo ir pajamų patvirtinimą.",
         },
@@ -366,7 +361,7 @@ export const content: Record<Locale, Content> = {
     },
     closing: {
       heading: "Ačiū, kad skyrėte laiko mus pažinti.",
-      body: "Nuoširdžiai dėkoju, kad perskaitėte. Mielai atsakysiu į visus klausimus, o rekomendacijas bei dokumentus pateiksiu paprašius. Tikiuosi, netrukus susipažinsime asmeniškai.",
+      body: "Nuoširdžiai dėkoju, kad perskaitėte. Mielai atsakysiu į visus klausimus, o reikiamus dokumentus pateiksiu paprašius. Tikiuosi, netrukus susipažinsime asmeniškai.",
       cta: "Susisiekti",
       photoLabel: "Axel su Raava ir Goldas lauke",
     },
@@ -374,7 +369,7 @@ export const content: Record<Locale, Content> = {
       heading: "Susisiekime",
       prompt: "Norėtumėte išnuomoti man būstą?",
       reveal: "Spustelėkite, kad pamatytumėte kontaktus",
-      note: "Kontaktai paslėpti, kad būtų išvengta brukalo. Rekomendacijos ir dokumentai pateikiami paprašius.",
+      note: "Kontaktai paslėpti, kad būtų išvengta brukalo. Reikiami dokumentai pateikiami paprašius.",
       links: [
         {
           type: "email",
@@ -436,7 +431,6 @@ export const content: Record<Locale, Content> = {
         { icon: "dog", label: "Two Well-Trained Dogs" },
         { icon: "sparkles", label: "Clean & Organized" },
         { icon: "moon", label: "Quiet Lifestyle" },
-        { icon: "star", label: "References Available" },
         { icon: "wallet", label: "Stable Income" },
         { icon: "handshake", label: "Willing to Increase Deposit" },
       ],
@@ -609,10 +603,6 @@ export const content: Record<Locale, Content> = {
           a: "Yes. The dogs stay calmly on their own while I'm at work and cause no damage.",
         },
         {
-          q: "Can you provide references?",
-          a: "Yes, I'm happy to provide references from previous landlords and my employer on request.",
-        },
-        {
           q: "Can you provide employment proof?",
           a: "Yes, I can provide proof of employment and income.",
         },
@@ -628,7 +618,7 @@ export const content: Record<Locale, Content> = {
     },
     closing: {
       heading: "Thank you for taking the time to get to know us.",
-      body: "I truly appreciate you reading this far. I'm happy to answer any questions, and references and documentation can be provided on request. I hope we'll get to meet in person soon.",
+      body: "I truly appreciate you reading this far. I'm happy to answer any questions, and documentation can be provided on request. I hope we'll get to meet in person soon.",
       cta: "Get In Touch",
       photoLabel: "Axel with Raava & Goldas outdoors",
     },
@@ -636,7 +626,7 @@ export const content: Record<Locale, Content> = {
       heading: "Let's talk",
       prompt: "Interested in renting to me?",
       reveal: "Click to reveal contact details",
-      note: "Details are hidden to reduce spam. References and documentation are available on request.",
+      note: "Details are hidden to reduce spam. Documentation is available on request.",
       links: [
         {
           type: "email",
