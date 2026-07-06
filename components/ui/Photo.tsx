@@ -1,5 +1,13 @@
 import { Camera } from "lucide-react";
 
+// Root-absolute asset paths (e.g. "/images/hero.jpg") must be prefixed with
+// the base path when the site is served from a subdirectory (GitHub Pages).
+// Next only auto-prefixes next/image & next/link, not a plain <img>.
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
+function withBasePath(src: string) {
+  return src.startsWith("/") ? `${BASE_PATH}${src}` : src;
+}
+
 type Tone = "beige" | "forest" | "warm";
 
 const tones: Record<Tone, string> = {
@@ -42,7 +50,7 @@ export function Photo({
       <div className={`overflow-hidden ${rounded} ${className}`}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={src}
+          src={withBasePath(src)}
           alt={alt}
           loading={priority ? "eager" : "lazy"}
           decoding="async"

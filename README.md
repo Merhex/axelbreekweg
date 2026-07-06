@@ -49,6 +49,20 @@ npm run build    # outputs a fully static site to ./out
 
 Serve `./out` from any static host (Netlify, Vercel, GitHub Pages, S3, …).
 
+## Deploying to GitHub Pages
+
+A workflow at `.github/workflows/deploy.yml` builds the site and publishes it
+to GitHub Pages on every push to `main` or the working branch.
+
+One-time setup: in the repo, go to **Settings → Pages → Build and deployment**
+and set **Source** to **GitHub Actions**. The site is then served from
+`https://<user>.github.io/TenantShowcase/`.
+
+Because it lives in a subdirectory, the build passes
+`NEXT_PUBLIC_BASE_PATH=/TenantShowcase` so all asset and image URLs resolve.
+If you rename the repo or use a custom domain, update that value (an empty
+value serves from the domain root).
+
 ## Editing content
 
 - **Copy (both languages):** `lib/content.ts`
